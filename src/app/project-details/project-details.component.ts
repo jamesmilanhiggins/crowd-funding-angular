@@ -28,4 +28,9 @@ export class ProjectDetailsComponent implements OnInit {
     this.projectToDisplay = this.projectService.getProjectById(this.projectId);
   }
 
+  submitPledge(dollarAmount, y) {
+    var amountHave = this.projectToDisplay.raisedAmount;
+    console.log(amountHave);
+  }
+
 }

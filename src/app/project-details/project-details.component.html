@@ -6,3 +6,11 @@
 <h4>Category: {{ (projectToDisplay | async)?.category }}</h4>
 <img src={{(projectToDisplay|async)?.image}}>
 <img src={{(projectToDisplay|async)?.authorImage}}>
+
+
+
+<br>
+<label for="">Pledge a dollar amount:</label>
+<input type="number" min="0" #dollarAmount>
+<br>
+<button (click)="submitPledge(dollarAmount.value, projectToDisplay.raisedAmount)" class="btn btn-success">Fund this project</button>
