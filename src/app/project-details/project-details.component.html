@@ -1,0 +1,7 @@
+<h2>{{ (projectToDisplay | async)?.name }}</h2>
+<h4>This project was created by: {{ (projectToDisplay | async)?.authors }}</h4>
+<p>{{ (projectToDisplay | async)?.description }}</p>
+<p>{{ (projectToDisplay | async)?.raisedAmount }} of {{ (projectToDisplay | async)?.askingAmount }} raised.</p>
+<p>Plans for the money: {{ (projectToDisplay | async)?.plans }}</p>
+<h4>Category: {{ (projectToDisplay | async)?.category }}</h4>
+<img src={{(projectToDisplay|async)?.image}}>

@@ -2,7 +2,7 @@
   welcome works!
 
 </p>
-<div *ngFor="let project of projects | async" class="panel panel-default">
+<div *ngFor="let project of projects | async" class="panel panel-default" (click)="goToDetailPage(project)">
   <div class="panel-body">
     {{project.name}}
   </div>
