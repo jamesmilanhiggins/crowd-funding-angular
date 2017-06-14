@@ -19,9 +19,9 @@ export class ProjectService {
   }
 
   getProjectById(projectId: string) {
-    console.log(projectId);
+
     var toReturn = this.database.object('projects/' + projectId);
-    console.log(toReturn);
+
     return toReturn;
     // return this.database.object('projects/' + projectId);
   }
@@ -43,5 +43,5 @@ export class ProjectService {
       authorImage: localUpdatedProject.authorImage
     });
   }
-
+  
 }

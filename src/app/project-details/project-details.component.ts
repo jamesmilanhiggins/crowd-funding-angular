@@ -25,12 +25,17 @@ export class ProjectDetailsComponent implements OnInit {
       this.projectId = urlParameters['id'];
     });
 
-    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+    this.projectService.getProjectById(this.projectId).subscribe(dataLastEmittedFromObserver => {
+      this.projectToDisplay = dataLastEmittedFromObserver;
+
+   })
+  //  var percentageFunded = (parseInt(this.projectToDisplay.raisedAmount)/(parseInt(this.projectToDisplay.askingAmount))) * 100;
   }
 
-  submitPledge(dollarAmount, y) {
-    var amountHave = this.projectToDisplay.raisedAmount;
-    console.log(amountHave);
+  submitPledge(amount1, amount2, project) {
+    var total = parseInt(amount1) + parseInt(amount2);
+    project.raisedAmount = total;
+    this.projectService.updateProject(project);
   }
 
 }

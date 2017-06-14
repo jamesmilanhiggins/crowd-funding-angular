@@ -1,11 +1,11 @@
-<h2>{{ (projectToDisplay | async)?.name }}</h2>
-<h4>This project was created by: {{ (projectToDisplay | async)?.authors }}</h4>
-<p>{{ (projectToDisplay | async)?.description }}</p>
-<p>{{ (projectToDisplay | async)?.raisedAmount }} of {{ (projectToDisplay | async)?.askingAmount }} raised.</p>
-<p>Plans for the money: {{ (projectToDisplay | async)?.plans }}</p>
-<h4>Category: {{ (projectToDisplay | async)?.category }}</h4>
-<img src={{(projectToDisplay|async)?.image}}>
-<img src={{(projectToDisplay|async)?.authorImage}}>
+<h2>{{ projectToDisplay?.name }}</h2>
+<h4>This project was created by: {{ projectToDisplay?.authors }}</h4>
+<p>{{ projectToDisplay?.description }}</p>
+<p>{{ projectToDisplay?.raisedAmount }} of {{ projectToDisplay?.askingAmount }} raised. {{(projectToDisplay?.raisedAmount/projectToDisplay?.askingAmount)*100}}% Funded</p>
+<p>Plans for the money: {{ projectToDisplay?.plans }}</p>
+<h4>Category: {{ projectToDisplay?.category }}</h4>
+<img src={{projectToDisplay?.image}}>
+<img src={{projectToDisplay?.authorImage}}>
 
 
 
@@ -13,4 +13,4 @@
 <label for="">Pledge a dollar amount:</label>
 <input type="number" min="0" #dollarAmount>
 <br>
-<button (click)="submitPledge(dollarAmount.value, projectToDisplay.raisedAmount)" class="btn btn-success">Fund this project</button>
+<button (click)="submitPledge(dollarAmount.value, projectToDisplay.raisedAmount, projectToDisplay); dollarAmount.value=''" class="btn btn-success">Fund this project</button>
