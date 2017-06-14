@@ -1,5 +1,5 @@
 export class Project {
-  constructor (public id: string,
+  constructor (
     public name: string,
     public authors: string,
     public description: string,
@@ -7,7 +7,7 @@ export class Project {
     public raisedAmount: number,
     public plans: string,
     public swag: number,
-    public category: string, 
+    public category: string,
     public favorited: number,
     public featured: number,
     public image: string,

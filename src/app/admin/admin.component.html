@@ -1,3 +1,81 @@
-<p>
-  admin works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Add New Project to the database</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <label>Project Name:</label>
+      <br>
+      <input #newName>
+    </div>
+
+    <div>
+      <label>Project Authors:</label>
+      <br>
+      <input #newAuthors>
+    </div>
+
+    <div>
+      <label>Project Description:</label>
+      <br>
+      <textarea #newDescription></textarea>
+    </div>
+
+    <div>
+      <label>Project AskingAmount:</label>
+      <br>
+      <input #newAskingAmount>
+    </div>
+
+    <div>
+      <label>Project RaisedAmount:</label>
+      <br>
+      <input #newRaisedAmount>
+    </div>
+
+    <div>
+      <label>Project Plans:</label>
+      <br>
+      <input #newPlans>
+    </div>
+
+    <div>
+      <label>Project Swag:</label>
+      <br>
+      <input #newSwag>
+    </div>
+
+    <div>
+      <label>Project Category:</label>
+      <br>
+      <input #newCategory>
+    </div>
+
+    <div>
+      <label>Project Favorited:</label>
+      <br>
+      <input #newFavorited>
+    </div>
+
+    <div>
+      <label>Project Featured:</label>
+      <br>
+      <input #newFeatured>
+    </div>
+
+    <div>
+      <label>Project Image:</label>
+      <br>
+      <input #newImage>
+    </div>
+
+    <div>
+      <label>Project Author Image:</label>
+      <br>
+      <input #newAuthorImage>
+    </div>
+
+    <button (click)="submitForm(newName.value, newAuthors.value, newDescription.value, newAskingAmount.value, newRaisedAmount.value, newPlans.value, newSwag.value, newCategory.value, newFavorited.value, newFeatured.value, newImage.value, newAuthorImage.value); newName.value=''; newAuthors.value=''; newDescription.value=''; newAskingAmount.value=''; newRaisedAmount.value=''; newPlans.value=''; newSwag.value=''; newCategory.value=''; newFavorited.value=''; newFeatured.value=''; newImage.value=''; newAuthorImage.value=''">Add</button>
+
+  </div>
+</div>
