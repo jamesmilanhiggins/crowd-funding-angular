@@ -13,6 +13,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { AdminComponent } from './admin/admin.component';
+import { EditProjectComponent } from './edit-project/edit-project.component';
 
 
 export const firebaseConfig = {
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     ProjectDetailsComponent,
-    AdminComponent
+    AdminComponent,
+    EditProjectComponent
   ],
   imports: [
     BrowserModule,

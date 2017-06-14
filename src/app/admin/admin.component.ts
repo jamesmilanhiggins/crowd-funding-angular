@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '../project.model';
 import { ProjectService } from '../project.service';
+import { Project } from '../project.model';
 
 @Component({
   selector: 'app-admin',
@@ -30,6 +30,7 @@ export class AdminComponent implements OnInit {
     authorImage: string) {
     var newProject: Project = new Project( name, authors, description, askingAmount, raisedAmount, plans, swag, category, favorited, featured, image, authorImage)
     console.log(newProject);
+    this.projectService.addProject(newProject);
     }
 
 }
