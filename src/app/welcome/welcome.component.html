@@ -2,6 +2,8 @@
   welcome works!
 
 </p>
-  <div *ngFor="let project of projects">
+<div *ngFor="let project of projects | async" class="panel panel-default">
+  <div class="panel-body">
     {{project.name}}
   </div>
+</div>
