@@ -1,3 +1,37 @@
-<p>
-  edit-project works!
-</p>
+<label>Project Name:</label>
+<input [(ngModel)]="selectedProject.name"><br>
+
+<label>Project Authors:</label>
+<input [(ngModel)]="selectedProject.authors"><br>
+
+<label>Project Description:</label>
+<textarea [(ngModel)]="selectedProject.description"></textarea>
+
+<label>Project AskingAmount:</label>
+<input [(ngModel)]="selectedProject.askingAmount"><br>
+
+<label>Project RaisedAmount:</label>
+<input [(ngModel)]="selectedProject.raisedAmount"><br>
+
+<label>Project Plans:</label>
+<input [(ngModel)]="selectedProject.plans"><br>
+
+<label>Project Swag:</label>
+<input [(ngModel)]="selectedProject.swag"><br>
+
+<label>Project Category:</label>
+<input [(ngModel)]="selectedProject.category"><br>
+
+<label>Project Favorited:</label>
+<input [(ngModel)]="selectedProject.favorited"><br>
+
+<label>Project Featured:</label>
+<input [(ngModel)]="selectedProject.featured"><br>
+
+<label>Project Image:</label>
+<input [(ngModel)]="selectedProject.image"><br>
+
+<label>Project Author Image:</label>
+<input [(ngModel)]="selectedProject.authorImage"><br>
+
+<button (click)="beginUpdatingProject(selectedProject)">Update</button>

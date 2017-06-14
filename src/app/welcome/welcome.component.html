@@ -1,9 +1,9 @@
-<p>
-  welcome works!
+<div *ngFor="let project of projects | async" class="panel panel-default">
+  <div (click)="goToDetailPage(project)" class="panel-body">
+    {{project.name}} by {{project.authors}}
+  </div>
 
-</p>
-<div *ngFor="let project of projects | async" class="panel panel-default" (click)="goToDetailPage(project)">
-  <div class="panel-body">
-    {{project.name}}
+  <div *ngIf="currentRoute == '/admin'">
+     <app-edit-project [selectedProject]="project"></app-edit-project>
   </div>
 </div>
