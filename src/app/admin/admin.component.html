@@ -82,7 +82,7 @@
 
 
 
-<div class="panel panel-default">
+<div *ngIf="(user | async) != null" class="panel panel-default">
   <div class="panel-heading">
     <h3>Modify Existing Project</h3>
   </div>

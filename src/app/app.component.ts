@@ -21,7 +21,11 @@ export class AppComponent {
 
   login(email, password) {
     // this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-    this.afAuth.auth.signInWithEmailAndPassword(email, password);
+    this.afAuth.auth.signInWithEmailAndPassword(email, password).catch(function(error) {
+      // var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+    });
   }
 
   logout() {
@@ -29,7 +33,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    console.log(this.user);
   }
 
 }

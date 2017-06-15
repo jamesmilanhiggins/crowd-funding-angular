@@ -1,18 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { Project } from '../project.model';
+import { Observable } from 'rxjs/Observable';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
-  providers: [ProjectService]
+  providers: [ProjectService, AngularFireAuth]
 })
+
 export class AdminComponent implements OnInit {
 
-  constructor(private projectService: ProjectService) { }
+  user: Observable<firebase.User>;
+
+  constructor(private projectService: ProjectService, public afAuth: AngularFireAuth) {
+    this.user = afAuth.authState;
+  }
+
 
   ngOnInit() {
+
   }
 
   submitForm(

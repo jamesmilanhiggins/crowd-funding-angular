@@ -3,6 +3,24 @@
     <div class="navbar-header">
       <a class="navbar-brand cooltext" routerLink="">Crowdfunding Home</a>
     </div>
+
+    <div class="navbar-nav navbar-right">
+      <div >{{errorMessage}}</div>
+      <!-- *ngIf="(errorMessage | async) != null" -->
+
+      <label>Email:</label>
+      <input #email>
+
+      <label>Password:</label>
+      <input type="password" #password>
+
+      <button (click)="login(email.value, password.value); email.value=''; password.value=''">Login</button>
+      <button (click)="logout()">Logout</button>
+
+      <div *ngIf="(user | async) == null"> Please log in. </div>
+      <div *ngIf="(user | async) != null"> Welcome in {{ (user | async)?.email }}! </div>
+    </div>
+
     <ul class="nav navbar-nav navbar-right">
       <li><a routerLink="" class="cooltext">Unused Link</a></li>
       <li><a routerLink="" class="cooltext">Unused Link</a></li>
@@ -18,22 +36,13 @@
     </div>
   </div>
 
-  <div> {{ (user | async)?.uid }} </div>
 
-  <label>Email:</label>
-  <input #email>
-
-  <label>Password:</label>
-  <input #password>
-
-  <button (click)="login(email.value, password.value)">Login</button>
-  <button (click)="logout()">Logout</button>
 
   <router-outlet></router-outlet>
 </div>
 
 
-<footer class="footer" *ngIf="user.uid != null">
+<footer class="footer" *ngIf="(user | async) != null">
   <div class="container">
     <a class="text-muted" routerLink="admin">Admin</a>
   </div>
