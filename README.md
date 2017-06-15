@@ -69,6 +69,6 @@ _Please contact James Higgins at James.Milan.Higgins@gmail.com if you have any q
 
 Copyright (c) 2017 **_James Higgins & Ken Rutan_**
 
-![Homepage](src/app/assets/images/home-page-screenshot.png)
+![Homepage](src/assets/images/home-page-screenshot.png)
 
-![Detail](src/app/assets/images/detail.png)
+![Detail](src/assets/images/detail.png)
