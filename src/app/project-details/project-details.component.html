@@ -1,12 +1,22 @@
-<h2>{{ projectToDisplay?.name }}</h2>
-<h4>This project was created by: {{ projectToDisplay?.authors }}</h4>
-<p>{{ projectToDisplay?.description }}</p>
-<p>{{ projectToDisplay?.raisedAmount }} of {{ projectToDisplay?.askingAmount }} raised. {{(projectToDisplay?.raisedAmount/projectToDisplay?.askingAmount)*100}}% Funded</p>
-<p>Plans for the money: {{ projectToDisplay?.plans }}</p>
-<h4>Category: {{ projectToDisplay?.category }}</h4>
-<img src={{projectToDisplay?.image}}>
-<img src={{projectToDisplay?.authorImage}}>
 
+<div class="squaretile">
+  <h2>{{ projectToDisplay?.name }}</h2>
+  <h4>This project was created by: {{ projectToDisplay?.authors }}</h4> <img src={{projectToDisplay?.authorImage}} class="portrait">
+  <p>{{ projectToDisplay?.description }}</p>
+  <div class="barframe">
+  <div class="progressbar" [ngStyle]="{'width':' '+widthNum+'%'}"></div>
+  </div>
+
+
+
+
+
+
+  <p>{{ projectToDisplay?.raisedAmount }} of {{ projectToDisplay?.askingAmount }} raised. {{(projectToDisplay?.raisedAmount/projectToDisplay?.askingAmount)*100}}% Funded</p>
+  <p>Plans for the money: {{ projectToDisplay?.plans }}</p>
+  <h4>Category: {{ projectToDisplay?.category }}</h4>
+  <img src={{projectToDisplay?.image}} class="picture">
+</div>
 
 
 <br>

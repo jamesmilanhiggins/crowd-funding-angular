@@ -8,6 +8,52 @@
   padding: 15px;
 }
 
-img {
+.picture {
   max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px grey;
+  margin: 40px;
+}
+
+.portrait {
+  border-radius: 150px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 5px 5px 20px grey;
+  margin: 10px;
+}
+
+.progressbar {
+  height: 20px;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  border-radius: 10px;
+}
+
+.barframe {
+  height: 22px;
+  width: 100%;
+  padding: 1px;
+  background-color: #f2f2f2;
+  border-radius: 11px;
+  box-shadow: 5px 5px 20px lightgrey;
+  margin: 10px;
+}
+
+.squaretile {
+  padding: 30px;
+  border-style: solid;
+  border-width: 0px 0px 20px 0px;
+  border-color: lightgreen;
+  box-shadow: 10px 10px 20px grey;
+  border-radius: 30px;
+}
+
+.innertile {
+  border-style: solid;
+  border-width: 4px 4px 4px 4px;
+  border-color: black;
+  padding: 20px;
+  border-radius: 30px;
+
+
 }

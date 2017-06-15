@@ -15,7 +15,7 @@ export class ProjectDetailsComponent implements OnInit {
   projectId: string;
   // projects: FirebaseListObservable<any[]>;
   projectToDisplay;
-
+  widthNum = 50;
   constructor(private route: ActivatedRoute, private location: Location, private projectService: ProjectService) {
 
   }
@@ -28,13 +28,17 @@ export class ProjectDetailsComponent implements OnInit {
     this.projectService.getProjectById(this.projectId).subscribe(dataLastEmittedFromObserver => {
       this.projectToDisplay = dataLastEmittedFromObserver;
 
-   })
+      this.widthNum = (parseInt(this.projectToDisplay.raisedAmount)/parseInt(this.projectToDisplay.askingAmount))*100;
+
+    })
   //  var percentageFunded = (parseInt(this.projectToDisplay.raisedAmount)/(parseInt(this.projectToDisplay.askingAmount))) * 100;
+
   }
 
   submitPledge(amount1, amount2, project) {
     var total = parseInt(amount1) + parseInt(amount2);
     project.raisedAmount = total;
+
     this.projectService.updateProject(project);
   }
 
