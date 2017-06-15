@@ -23,6 +23,14 @@ export class WelcomeComponent implements OnInit {
    onChange(optionFromMenu) {
      this.categoryFilter = optionFromMenu;
    }
+   changeFeatureCheckValue(project) {
+     project.featured = '1';
+     this.projectService.updateProject(project);
+   }
+   changeFeatureUnCheckValue(project) {
+     project.featured = '0';
+     this.projectService.updateProject(project);
+   }
 
   goToDetailPage(clickedProject) {
     this.router.navigate(['projects', clickedProject.$key]);

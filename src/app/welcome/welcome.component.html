@@ -7,11 +7,15 @@
 
 
 <div *ngFor="let project of projects | async | category:categoryFilter" class="projectbar">
+
   <div (click)="goToDetailPage(project)" class="cooltext">
     {{project.name}} by {{project.authors}}
   </div>
-
+  <div class="cooltext"  >
+    <span class="readabletext">Featured:</span><span (click)="changeFeatureCheckValue(project)" *ngIf="project.featured === '0'">&#9744;</span><span (click)="changeFeatureUnCheckValue(project)" *ngIf="project.featured === '1'">&#9745;</span>
+  </div>
   <div *ngIf="currentRoute == '/admin'">
      <app-edit-project [selectedProject]="project"></app-edit-project>
   </div>
+
 </div>
