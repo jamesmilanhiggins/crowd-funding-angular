@@ -98,3 +98,17 @@ html {
 .projectbar:hover {
   background-color: #ccffcc;
 }
+
+.logotext {
+  font-size: 75px;
+  color: lightgreen;
+  text-shadow: 2px 2px #006600;
+}
+
+.logo {
+  width:150px;
+}
+
+.col-sm-10 {
+  display: inline;
+}
