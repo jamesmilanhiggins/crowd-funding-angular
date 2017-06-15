@@ -5,8 +5,14 @@
   <option value="Selfish">Selfish</option>
 </select>
 
+<select (change)="onChangeFeatured($event.target.value)">
+  <option value="All" selected="selected">All</option>
+  <option value="1">Featured</option>
+  <option value="0">Unfeatured</option>
+</select>
 
-<div *ngFor="let project of projects | async | category:categoryFilter" class="projectbar">
+
+<div *ngFor="let project of projects | async | category:categoryFilter:featured" class="projectbar">
 
   <div (click)="goToDetailPage(project)" class="cooltext">
     {{project.name}} by {{project.authors}}

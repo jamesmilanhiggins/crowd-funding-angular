@@ -6,19 +6,37 @@ import { Project } from './project.model';
 })
 export class CategoryPipe implements PipeTransform {
 
-  transform(input: Project[], categoryFilter): any {
+  transform(input: Project[], categoryFilter, featuredFilter): any {
     var output: Project[] = [];
+    var featuredOutput: Project[] = [];
+
     if(categoryFilter === "allProjects") {
-      return input;
+      for (var i = 0; i < input.length; i++) {
+        output.push(input[i]);
+      }
     }
+
     else {
       for (var i = 0; i < input.length; i++) {
         if (input[i].category === categoryFilter) {
           output.push(input[i]);
         }
       }
-      return output;
     }
+
+    if(featuredFilter === "All") {
+      featuredOutput = output;
+    }
+
+    else {
+      for (var i = 0; i < output.length; i++) {
+        if (output[i].featured === featuredFilter) {
+          featuredOutput.push(output[i]);
+        }
+      }
+    }
+
+    return featuredOutput;
   }
 
 }

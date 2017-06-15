@@ -14,6 +14,7 @@ export class WelcomeComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
   categoryFilter = "allProjects";
+  featured = "All";
 
   constructor(private router: Router, private projectService: ProjectService) { }
 
@@ -23,6 +24,12 @@ export class WelcomeComponent implements OnInit {
    onChange(optionFromMenu) {
      this.categoryFilter = optionFromMenu;
    }
+
+   onChangeFeatured(optionFromMenu) {
+     this.featured = optionFromMenu;
+   }
+
+
    changeFeatureCheckValue(project) {
      project.featured = '1';
      this.projectService.updateProject(project);

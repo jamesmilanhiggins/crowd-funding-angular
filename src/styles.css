@@ -36,6 +36,7 @@ label {
   height: 20px;
   background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   border-radius: 10px;
+  max-width: 100%;
 }
 
 .barframe {
