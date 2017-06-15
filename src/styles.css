@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  font-family: 'Secular One', sans-serif;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -42,7 +46,7 @@
 .squaretile {
   padding: 30px;
   border-style: solid;
-  border-width: 0px 0px 20px 0px;
+  border-width: 20px 0px 20px 0px;
   border-color: lightgreen;
   box-shadow: 10px 10px 20px grey;
   border-radius: 30px;
@@ -54,6 +58,43 @@
   border-color: black;
   padding: 20px;
   border-radius: 30px;
+}
 
+.squaretile:hover {
+  background-color: #ccffcc;
+}
 
+.fancy {
+  font-family: 'Galada', cursive;
+}
+
+.coolbutton {
+  font-family: 'Galada', cursive;
+  text-shadow: 2px 2px #006600;
+  max-height: 50px;
+}
+
+.cooltext {
+  font-family: 'Galada', cursive;
+  font-size: 30px;
+}
+
+.readabletext {
+  font-family: 'Secular One', sans-serif;
+}
+
+.projectbar {
+  border-style: solid;
+  border-width: 20px 0px 20px 0px;
+  border-color: lightgreen;
+  box-shadow: 10px 10px 20px grey;
+  border-radius: 30px;
+  font-family: 'Galada', cursive;
+  font-size: 30px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.projectbar:hover {
+  background-color: #ccffcc;
 }

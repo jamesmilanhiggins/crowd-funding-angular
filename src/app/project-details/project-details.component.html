@@ -1,26 +1,19 @@
 
 <div class="squaretile">
-  <h2>{{ projectToDisplay?.name }}</h2>
-  <h4>This project was created by: {{ projectToDisplay?.authors }}</h4> <img src={{projectToDisplay?.authorImage}} class="portrait">
-  <p>{{ projectToDisplay?.description }}</p>
+  <h2 class="cooltext">{{ projectToDisplay?.name }}</h2>
+  <h4 class="readabletext">This project was created by: {{ projectToDisplay?.authors }}</h4> <img src={{projectToDisplay?.authorImage}} class="portrait">
+  <p class="readabletext">{{ projectToDisplay?.description }}</p>
   <div class="barframe">
-  <div class="progressbar" [ngStyle]="{'width':' '+widthNum+'%'}"></div>
+    <div class="progressbar" [ngStyle]="{'width':' '+widthNum+'%'}"></div>
   </div>
 
-
-
-
-
-
-  <p>{{ projectToDisplay?.raisedAmount }} of {{ projectToDisplay?.askingAmount }} raised. {{(projectToDisplay?.raisedAmount/projectToDisplay?.askingAmount)*100}}% Funded</p>
-  <p>Plans for the money: {{ projectToDisplay?.plans }}</p>
-  <h4>Category: {{ projectToDisplay?.category }}</h4>
+  <p class="readabletext">{{ projectToDisplay?.raisedAmount }} of {{ projectToDisplay?.askingAmount }} raised. {{(projectToDisplay?.raisedAmount/projectToDisplay?.askingAmount)*100}}% Funded</p>
+  <p class="readabletext">Plans for the money: {{ projectToDisplay?.plans }}</p>
+  <h4 class="readabletext">Category: {{ projectToDisplay?.category }}</h4>
   <img src={{projectToDisplay?.image}} class="picture">
+
+  <label for="" class="cooltext">Pledge a dollar amount:</label>
+  <input type="number" min="0" #dollarAmount class="cooltext">
+  <button (click)="submitPledge(dollarAmount.value, projectToDisplay.raisedAmount, projectToDisplay); dollarAmount.value=''" class="btn btn-success coolbutton"><h4>Fund this project</h4></button>
+
 </div>
-
-
-<br>
-<label for="">Pledge a dollar amount:</label>
-<input type="number" min="0" #dollarAmount>
-<br>
-<button (click)="submitPledge(dollarAmount.value, projectToDisplay.raisedAmount, projectToDisplay); dollarAmount.value=''" class="btn btn-success">Fund this project</button>

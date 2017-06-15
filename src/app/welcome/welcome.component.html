@@ -1,5 +1,5 @@
-<div *ngFor="let project of projects | async" class="panel panel-default">
-  <div (click)="goToDetailPage(project)" class="panel-body">
+<div *ngFor="let project of projects | async" class="projectbar">
+  <div (click)="goToDetailPage(project)" class="">
     {{project.name}} by {{project.authors}}
   </div>
 
