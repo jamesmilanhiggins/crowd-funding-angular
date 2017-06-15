@@ -6,73 +6,73 @@
     <div>
       <label>Project Name:</label>
       <br>
-      <input #newName>
+      <input class="readabletext" #newName>
     </div>
 
     <div>
       <label>Project Authors:</label>
       <br>
-      <input #newAuthors>
+      <input class="readabletext" #newAuthors>
     </div>
 
     <div>
       <label>Project Description:</label>
       <br>
-      <textarea #newDescription></textarea>
+      <textarea class="readabletext" #newDescription></textarea>
     </div>
 
     <div>
       <label>Project AskingAmount:</label>
       <br>
-      <input #newAskingAmount>
+      <input class="readabletext" #newAskingAmount>
     </div>
 
     <div>
       <label>Project RaisedAmount:</label>
       <br>
-      <input #newRaisedAmount>
+      <input class="readabletext" #newRaisedAmount>
     </div>
 
     <div>
       <label>Project Plans:</label>
       <br>
-      <input #newPlans>
+      <input class="readabletext" #newPlans>
     </div>
 
     <div>
       <label>Project Swag:</label>
       <br>
-      <input #newSwag>
+      <input class="readabletext" #newSwag>
     </div>
 
     <div>
       <label>Project Category:</label>
       <br>
-      <input #newCategory>
+      <input class="readabletext" #newCategory>
     </div>
 
     <div>
       <label>Project Favorited:</label>
       <br>
-      <input #newFavorited>
+      <input class="readabletext" #newFavorited>
     </div>
 
     <div>
       <label>Project Featured:</label>
       <br>
-      <input #newFeatured>
+      <input class="readabletext" #newFeatured>
     </div>
 
     <div>
       <label>Project Image:</label>
       <br>
-      <input #newImage>
+      <input class="readabletext" #newImage>
     </div>
 
     <div>
       <label>Project Author Image:</label>
       <br>
-      <input #newAuthorImage>
+      <input class="readabletext" #newAuthorImage>
     </div>
 
     <button (click)="submitForm(newName.value, newAuthors.value, newDescription.value, newAskingAmount.value, newRaisedAmount.value, newPlans.value, newSwag.value, newCategory.value, newFavorited.value, newFeatured.value, newImage.value, newAuthorImage.value); newName.value=''; newAuthors.value=''; newDescription.value=''; newAskingAmount.value=''; newRaisedAmount.value=''; newPlans.value=''; newSwag.value=''; newCategory.value=''; newFavorited.value=''; newFeatured.value=''; newImage.value=''; newAuthorImage.value=''">Add</button>

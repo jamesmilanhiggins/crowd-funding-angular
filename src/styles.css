@@ -3,6 +3,11 @@ html {
   font-family: 'Secular One', sans-serif;
 }
 
+label {
+  font-family: 'Secular One', sans-serif;
+  font-size: 14px;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -89,8 +94,6 @@ html {
   border-color: lightgreen;
   box-shadow: 10px 10px 20px grey;
   border-radius: 30px;
-  font-family: 'Galada', cursive;
-  font-size: 30px;
   padding: 20px;
   margin: 20px;
 }

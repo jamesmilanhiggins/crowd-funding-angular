@@ -15,7 +15,7 @@ export class ProjectDetailsComponent implements OnInit {
   projectId: string;
   // projects: FirebaseListObservable<any[]>;
   projectToDisplay;
-  widthNum = 50;
+  widthNum = 0;
   constructor(private route: ActivatedRoute, private location: Location, private projectService: ProjectService) {
 
   }
@@ -36,10 +36,14 @@ export class ProjectDetailsComponent implements OnInit {
   }
 
   submitPledge(amount1, amount2, project) {
-    var total = parseInt(amount1) + parseInt(amount2);
-    project.raisedAmount = total;
+    // if (/[0-9]+/.test(amount1)) {
+    amount1 = Math.ceil(amount1);
+    if (amount1 != ''&& amount1 >= 0) {
+      var total = parseInt(amount1) + parseInt(amount2);
+      project.raisedAmount = total;
 
-    this.projectService.updateProject(project);
+      this.projectService.updateProject(project);
+    }
   }
 
 }

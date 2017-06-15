@@ -1,5 +1,13 @@
-<div *ngFor="let project of projects | async" class="projectbar">
-  <div (click)="goToDetailPage(project)" class="">
+<p>Filter</p>
+<select (change)="onChange($event.target.value)">
+  <option value="allProjects" selected="selected">All Projects</option>
+  <option value="Charity">Charity</option>
+  <option value="Selfish">Selfish</option>
+</select>
+
+
+<div *ngFor="let project of projects | async | category:categoryFilter" class="projectbar">
+  <div (click)="goToDetailPage(project)" class="cooltext">
     {{project.name}} by {{project.authors}}
   </div>
 

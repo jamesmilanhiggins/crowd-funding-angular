@@ -14,6 +14,7 @@ import { routing } from './app.routing';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
+import { CategoryPipe } from './category.pipe';
 
 
 export const firebaseConfig = {
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     ProjectDetailsComponent,
     AdminComponent,
-    EditProjectComponent
+    EditProjectComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

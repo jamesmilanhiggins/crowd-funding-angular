@@ -13,7 +13,7 @@
   <img src={{projectToDisplay?.image}} class="picture">
 
   <label for="" class="cooltext">Pledge a dollar amount:</label>
-  <input type="number" min="0" #dollarAmount class="cooltext">
-  <button (click)="submitPledge(dollarAmount.value, projectToDisplay.raisedAmount, projectToDisplay); dollarAmount.value=''" class="btn btn-success coolbutton"><h4>Fund this project</h4></button>
+  <input type="number" min="0" #dollarAmount class="cooltext" value="0">
+  <button (click)="submitPledge(dollarAmount.value, projectToDisplay.raisedAmount, projectToDisplay); dollarAmount.value='0'" class="btn btn-success coolbutton"><h4>Fund this project</h4></button>
 
 </div>
