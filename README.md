@@ -1,28 +1,73 @@
 # CrowdFunding
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+#### _This app lets users view and pledge money towards projects. Admins can log in and edit and add new projects._
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+#### By _**James Higgins & Ken Rutan**_
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Description
 
-## Build
+_Users can click on the listed projects to view the project details. If the user would like, they can pledge money towards the specific project. Admins can add and edit projects. Users and admins can feature projects and filter by featured, and filter by category._
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Setup/Installation Requirements
 
-## Running unit tests
+### Firebase Integration
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Create a firebase account at `https://firebase.google.com`
+* Add a new project to your firebase account
+* Create a file in the app folder labeled api-keys.ts
+* Add the following to your api-keys file:
 
-## Running end-to-end tests
+`export var masterFirebaseConfig = {
+    apiKey: "xxxx",
+    authDomain: "xxxx.firebaseapp.com",
+    databaseURL: "https://xxxx.firebaseio.com",
+    storageBucket: "xxxx.appspot.com",
+    messagingSenderId: "xxxx"
+  };
+`
+### Access Atom Files
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+* _Ensure connection to the Internet_
+* _On a mac using spotlight search type in terminal_
+* _Once in terminal enter the following commands to clone the file to your desktop and open the repository:_
+```
+$ cd desktop
+$ git clone https://github.com/jamesmilanhiggins/crowd-funding-angular
+$ cd crowd-funding-angular
+$ npm install
+$ bower install
+$ ng serve
+$ open localhost:4200 in your browser
+```
+or visit live site [here](https://crowd-funding-85940.firebaseapp.com/)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Known Bugs
+
+* There are no known bugs at this time*
+
+
+## Support and contact details
+
+_Please contact James Higgins at James.Milan.Higgins@gmail.com if you have any questions._
+
+## Technologies Used
+
+* JavaScript
+* Angular
+* Node
+* Bower
+* HTML
+* Bootstrap
+* Firebase
+
+### License
+
+*This software is licensed under MIT license.*
+
+Copyright (c) 2017 **_James Higgins & Ken Rutan_**
+
+![Homepage](home-page-screenshot.png)
+![Detail](detail.png)
