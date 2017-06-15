@@ -18,9 +18,22 @@
     </div>
   </div>
 
+  <div> {{ (user | async)?.uid }} </div>
+
+  <label>Email:</label>
+  <input #email>
+
+  <label>Password:</label>
+  <input #password>
+
+  <button (click)="login(email.value, password.value)">Login</button>
+  <button (click)="logout()">Logout</button>
+
   <router-outlet></router-outlet>
 </div>
-<footer class="footer">
+
+
+<footer class="footer" *ngIf="user.uid != null">
   <div class="container">
     <a class="text-muted" routerLink="admin">Admin</a>
   </div>
