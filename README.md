@@ -2,7 +2,7 @@
 
 #### _This app lets users view and pledge money towards projects. Admins can log in and edit and add new projects._
 
-
+Visit live site [here](https://crowd-funding-85940.firebaseapp.com/)
 
 #### By _**James Higgins & Ken Rutan**_
 
@@ -41,7 +41,7 @@ $ bower install
 $ ng serve
 $ open localhost:4200 in your browser
 ```
-or visit live site [here](https://crowd-funding-85940.firebaseapp.com/)
+
 
 
 ## Known Bugs
